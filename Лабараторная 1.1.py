@@ -1,0 +1,5 @@
+Name = input("Ваше имя:")
+Lastname = input("Фамилия:")
+Age = input("Возраст:")
+print(f"Меня зовут: {Name}, Моя фамилия: {Lastname}, Мне: {Age} лет.")
+print("Меня зовут: {}, Моя фамилия: {}, Мне: {} лет.".format(Name, Lastname, Age))
