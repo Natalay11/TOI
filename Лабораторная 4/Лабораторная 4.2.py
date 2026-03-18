@@ -1,9 +1,20 @@
-def muka(g:int):
-    for i in range(2,g):
-        if g%i==0:
+import math
+
+def muka(g: int):
+    if g < 2:
+        return False
+    for i in range(2, int(math.sqrt(g)) + 1):
+        if g % i == 0:
             return False
     return True
-X = int(input("Введите число: "))
-Y = list(range(X+1))
-Spisok = [i for i in Y if muka(i) == True]
-print(Spisok)
+
+def prostye_chisla():
+    n = 2
+    while True:
+        if muka(n):
+            yield n
+        n += 1
+
+gen = prostye_chisla()
+for _ in range(10):
+    print(next(gen))
